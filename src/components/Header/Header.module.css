@@ -50,6 +50,7 @@ input {
   position: absolute;
   right: 8px;
   top: 7px;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 481px) {

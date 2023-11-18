@@ -13,7 +13,15 @@ const weatherCast = [
   { icon: <WindyWeather />, type: "Windy" },
 ];
 
-const Card = ({ weatherType }) => {
+const Card = ({
+  weatherType,
+  date,
+  highTemperature,
+  lowTemperature,
+  humidity,
+  sunriseTime,
+  sunsetTime,
+}) => {
   return (
     <section className={classes.section}>
       <div className={classes.date}>20 Jan 2023</div>
@@ -30,11 +38,11 @@ const Card = ({ weatherType }) => {
           <h4>Sunny</h4>
         </div>
         <hr />
-        <p>23°C / 63°F</p>
-        <p>17°C / 43°F</p>
-        <p>76%</p>
-        <p>06:21 AM</p>
-        <p>05:93 PM</p>
+        <p>{highTemperature}</p>
+        <p>{lowTemperature}</p>
+        <p>{humidity}%</p>
+        <p>{sunriseTime}</p>
+        <p>{sunsetTime}</p>
       </article>
     </section>
   );
